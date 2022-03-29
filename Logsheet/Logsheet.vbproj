@@ -1,0 +1,1370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0966CF5C-8007-493D-9C4D-804F45B83A5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Logsheet.My.MyApplication</StartupObject>
+    <RootNamespace>Logsheet</RootNamespace>
+    <AssemblyName>Logsheet</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>agi logo1.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Logsheet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Logsheet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="branchlist.Designer.vb">
+      <DependentUpon>branchlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="branchlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="branofpallets.Designer.vb">
+      <DependentUpon>branofpallets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="branofpallets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="branorderfill.Designer.vb">
+      <DependentUpon>branorderfill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="branorderfill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="category.Designer.vb">
+      <DependentUpon>category.vb</DependentUpon>
+    </Compile>
+    <Compile Include="category.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseshift.Designer.vb">
+      <DependentUpon>chooseshift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="chooseshift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseshiftonly.Designer.vb">
+      <DependentUpon>chooseshiftonly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="chooseshiftonly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coa.Designer.vb">
+      <DependentUpon>coa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coacancel.Designer.vb">
+      <DependentUpon>coacancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coacancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coacreate.Designer.vb">
+      <DependentUpon>coacreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coacreate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coaformselect.Designer.vb">
+      <DependentUpon>coaformselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coaformselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coaformat.Designer.vb">
+      <DependentUpon>coaformat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coaformat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coainfo.Designer.vb">
+      <DependentUpon>coainfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coainfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coaofnumselect.Designer.vb">
+      <DependentUpon>coaofnumselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coaofnumselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coaselect.Designer.vb">
+      <DependentUpon>coaselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coaselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coasum.Designer.vb">
+      <DependentUpon>coasum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coasum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirm.Designer.vb">
+      <DependentUpon>confirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmsave.Designer.vb">
+      <DependentUpon>confirmsave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirmsave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmsupprod.Designer.vb">
+      <DependentUpon>confirmsupprod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirmsupprod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmsupqca.Designer.vb">
+      <DependentUpon>confirmsupqca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirmsupqca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmsupwhse.Designer.vb">
+      <DependentUpon>confirmsupwhse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirmsupwhse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confirmsupadmin.Designer.vb">
+      <DependentUpon>confirmsupadmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="confirmsupadmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="branch.Designer.vb">
+      <DependentUpon>branch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="branch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coawoutformat.Designer.vb">
+      <DependentUpon>coawoutformat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coawoutformat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="coainfowithform.Designer.vb">
+      <DependentUpon>coainfowithform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="coainfowithform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="copyoforderfillpallets.Designer.vb">
+      <DependentUpon>copyoforderfillpallets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="copyoforderfillpallets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crcoamaster.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crcoamaster.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crcoaparam.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crcoaparam.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ofchoose.Designer.vb">
+      <DependentUpon>ofchoose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ofchoose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptcoaformat.Designer.vb">
+      <DependentUpon>rptcoaformat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptcoaformat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crcoa1.vb">
+      <DependentUpon>crcoa1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptreceive.Designer.vb">
+      <DependentUpon>rptreceive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptreceive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crreceive.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crreceive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="recselect.Designer.vb">
+      <DependentUpon>recselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receiveinfo.Designer.vb">
+      <DependentUpon>receiveinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receiveinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receivenew.Designer.vb">
+      <DependentUpon>receivenew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receivenew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reclogsheet.Designer.vb">
+      <DependentUpon>reclogsheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reclogsheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reccancel.Designer.vb">
+      <DependentUpon>reccancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reccancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recticketmodule.vb" />
+    <Compile Include="recticketpick.Designer.vb">
+      <DependentUpon>recticketpick.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recticketpick.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receivesum.Designer.vb">
+      <DependentUpon>receivesum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="receivesum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recticket.Designer.vb">
+      <DependentUpon>recticket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="recticket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crloghour.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crloghour.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crlogsheetrevisewoutwt.vb">
+      <DependentUpon>crlogsheetrevisewoutwt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tickethourselect.Designer.vb">
+      <DependentUpon>tickethourselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tickethourselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newitems.Designer.vb">
+      <DependentUpon>newitems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="newitems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillinfoothers.Designer.vb">
+      <DependentUpon>orderfillinfoothers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillinfoothers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillrethistory.Designer.vb">
+      <DependentUpon>orderfillrethistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillrethistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillretticks.Designer.vb">
+      <DependentUpon>orderfillretticks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillretticks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Copyofcrlogsheet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Copyofcrlogsheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="orderfillpallets.Designer.vb">
+      <DependentUpon>orderfillpallets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillpallets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crbintag.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crbintag.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crcoa.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crcoa.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crcoarevise.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crcoarevise.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crcoatseries.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crcoatseries.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crlogsheetrevise.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crlogsheetrevise.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crorderfillnew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crorderfillnew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crorderfillperitem.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crorderfillperitem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crpallettag.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpallettag.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customer.Designer.vb">
+      <DependentUpon>customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dept.Designer.vb">
+      <DependentUpon>dept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ibalik.Designer.vb">
+      <DependentUpon>ibalik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ibalik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="importcustomer.Designer.vb">
+      <DependentUpon>importcustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="importcustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="importitems.Designer.vb">
+      <DependentUpon>importitems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="importitems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="items.Designer.vb">
+      <DependentUpon>items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginlogs.Designer.vb">
+      <DependentUpon>loginlogs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loginlogs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiform.Designer.vb">
+      <DependentUpon>mdiform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mdiform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="orderfill.Designer.vb">
+      <DependentUpon>orderfill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillcancel.Designer.vb">
+      <DependentUpon>orderfillcancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillcancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillinfo.Designer.vb">
+      <DependentUpon>orderfillinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillitems.Designer.vb">
+      <DependentUpon>orderfillitems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillitems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillnew.Designer.vb">
+      <DependentUpon>orderfillnew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillnew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillothers.Designer.vb">
+      <DependentUpon>orderfillothers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillothers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillrems.Designer.vb">
+      <DependentUpon>orderfillrems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillrems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillretreason.Designer.vb">
+      <DependentUpon>orderfillretreason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillretreason.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillreturn.Designer.vb">
+      <DependentUpon>orderfillreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillselect.Designer.vb">
+      <DependentUpon>orderfillselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfillsum.Designer.vb">
+      <DependentUpon>orderfillsum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfillsum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderfilltickets.Designer.vb">
+      <DependentUpon>orderfilltickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orderfilltickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orfreturn.Designer.vb">
+      <DependentUpon>orfreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orfreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletizer.Designer.vb">
+      <DependentUpon>palletizer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletizer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletqa.Designer.vb">
+      <DependentUpon>palletqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletsum.Designer.vb">
+      <DependentUpon>palletsum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletsum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletsumcancel.Designer.vb">
+      <DependentUpon>palletsumcancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletsumcancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletsumqa.Designer.vb">
+      <DependentUpon>palletsumqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletsumqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="palletsumres.Designer.vb">
+      <DependentUpon>palletsumres.vb</DependentUpon>
+    </Compile>
+    <Compile Include="palletsumres.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plocation.Designer.vb">
+      <DependentUpon>plocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="plocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptcoarevise.Designer.vb">
+      <DependentUpon>rptcoarevise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptcoarevise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptlogsheetrevise.Designer.vb">
+      <DependentUpon>rptlogsheetrevise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptlogsheetrevise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptorderfill.Designer.vb">
+      <DependentUpon>rptorderfill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptorderfill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptpallettag.Designer.vb">
+      <DependentUpon>rptpallettag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptpallettag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shift.Designer.vb">
+      <DependentUpon>shift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stocksheet.Designer.vb">
+      <DependentUpon>stocksheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stocksheet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticket.Designer.vb">
+      <DependentUpon>ticket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketbag.Designer.vb">
+      <DependentUpon>ticketbag.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketbag.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketcancel.Designer.vb">
+      <DependentUpon>ticketcancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketcancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketchoose.Designer.vb">
+      <DependentUpon>ticketchoose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketchoose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tickethourly.Designer.vb">
+      <DependentUpon>tickethourly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tickethourly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketlines.Designer.vb">
+      <DependentUpon>ticketlines.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketlines.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketmodule.vb" />
+    <Compile Include="ticketrems.Designer.vb">
+      <DependentUpon>ticketrems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketrems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ticketsum.Designer.vb">
+      <DependentUpon>ticketsum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ticketsum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlogbin.Designer.vb">
+      <DependentUpon>tlogbin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tlogbin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tlogcancel.Designer.vb">
+      <DependentUpon>tlogcancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tlogcancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsearch.Designer.vb">
+      <DependentUpon>tsearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tsearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tselectline.Designer.vb">
+      <DependentUpon>tselectline.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tselectline.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsetitem.Designer.vb">
+      <DependentUpon>tsetitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tsetitem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tsetrange.Designer.vb">
+      <DependentUpon>tsetrange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tsetrange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users.Designer.vb">
+      <DependentUpon>users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="version.Designer.vb">
+      <DependentUpon>version.vb</DependentUpon>
+    </Compile>
+    <Compile Include="version.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewbin.Designer.vb">
+      <DependentUpon>viewbin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewbin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewpallet.Designer.vb">
+      <DependentUpon>viewpallet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewpallet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewpallets.Designer.vb">
+      <DependentUpon>viewpallets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewpallets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wgroup.Designer.vb">
+      <DependentUpon>wgroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="wgroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="whse.Designer.vb">
+      <DependentUpon>whse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="whse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="branchlist.resx">
+      <DependentUpon>branchlist.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="branofpallets.resx">
+      <DependentUpon>branofpallets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="branorderfill.resx">
+      <DependentUpon>branorderfill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="category.resx">
+      <DependentUpon>category.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseshift.resx">
+      <DependentUpon>chooseshift.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseshiftonly.resx">
+      <DependentUpon>chooseshiftonly.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coa.resx">
+      <DependentUpon>coa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coacancel.resx">
+      <DependentUpon>coacancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coacreate.resx">
+      <DependentUpon>coacreate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coaformselect.resx">
+      <DependentUpon>coaformselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coaformat.resx">
+      <DependentUpon>coaformat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coainfo.resx">
+      <DependentUpon>coainfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coaofnumselect.resx">
+      <DependentUpon>coaofnumselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coaselect.resx">
+      <DependentUpon>coaselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coasum.resx">
+      <DependentUpon>coasum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirm.resx">
+      <DependentUpon>confirm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmsave.resx">
+      <DependentUpon>confirmsave.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmsupprod.resx">
+      <DependentUpon>confirmsupprod.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmsupqca.resx">
+      <DependentUpon>confirmsupqca.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmsupwhse.resx">
+      <DependentUpon>confirmsupwhse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmsupadmin.resx">
+      <DependentUpon>confirmsupadmin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="branch.resx">
+      <DependentUpon>branch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coawoutformat.resx">
+      <DependentUpon>coawoutformat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="coainfowithform.resx">
+      <DependentUpon>coainfowithform.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="copyoforderfillpallets.resx">
+      <DependentUpon>copyoforderfillpallets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoamaster.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoamaster.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoaparam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoaparam.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ofchoose.resx">
+      <DependentUpon>ofchoose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptcoaformat.resx">
+      <DependentUpon>rptcoaformat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoa1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoa1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptreceive.resx">
+      <DependentUpon>rptreceive.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crreceive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crreceive.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recselect.resx">
+      <DependentUpon>recselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receiveinfo.resx">
+      <DependentUpon>receiveinfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receivenew.resx">
+      <DependentUpon>receivenew.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reclogsheet.resx">
+      <DependentUpon>reclogsheet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reccancel.resx">
+      <DependentUpon>reccancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recticketpick.resx">
+      <DependentUpon>recticketpick.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receivesum.resx">
+      <DependentUpon>receivesum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="recticket.resx">
+      <DependentUpon>recticket.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crloghour.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crloghour.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crlogsheetrevisewoutwt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crlogsheetrevisewoutwt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletqa.resx">
+      <DependentUpon>palletqa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tickethourselect.resx">
+      <DependentUpon>tickethourselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newitems.resx">
+      <DependentUpon>newitems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillinfoothers.resx">
+      <DependentUpon>orderfillinfoothers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillrethistory.resx">
+      <DependentUpon>orderfillrethistory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillretticks.resx">
+      <DependentUpon>orderfillretticks.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copyofcrlogsheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copyofcrlogsheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillpallets.resx">
+      <DependentUpon>orderfillpallets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crbintag.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crbintag.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoa.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoa.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoarevise.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoarevise.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crcoatseries.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crcoatseries.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crlogsheetrevise.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crlogsheetrevise.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crorderfillnew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crorderfillnew.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crorderfillperitem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crorderfillperitem.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crpallettag.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpallettag.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dept.resx">
+      <DependentUpon>dept.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ibalik.resx">
+      <DependentUpon>ibalik.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="importcustomer.resx">
+      <DependentUpon>importcustomer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="importitems.resx">
+      <DependentUpon>importitems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="items.resx">
+      <DependentUpon>items.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginlogs.resx">
+      <DependentUpon>loginlogs.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiform.resx">
+      <DependentUpon>mdiform.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfill.resx">
+      <DependentUpon>orderfill.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillcancel.resx">
+      <DependentUpon>orderfillcancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillinfo.resx">
+      <DependentUpon>orderfillinfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillitems.resx">
+      <DependentUpon>orderfillitems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillnew.resx">
+      <DependentUpon>orderfillnew.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillothers.resx">
+      <DependentUpon>orderfillothers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillrems.resx">
+      <DependentUpon>orderfillrems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillretreason.resx">
+      <DependentUpon>orderfillretreason.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillreturn.resx">
+      <DependentUpon>orderfillreturn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillselect.resx">
+      <DependentUpon>orderfillselect.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfillsum.resx">
+      <DependentUpon>orderfillsum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderfilltickets.resx">
+      <DependentUpon>orderfilltickets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orfreturn.resx">
+      <DependentUpon>orfreturn.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletizer.resx">
+      <DependentUpon>palletizer.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletsum.resx">
+      <DependentUpon>palletsum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletsumcancel.resx">
+      <DependentUpon>palletsumcancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletsumqa.resx">
+      <DependentUpon>palletsumqa.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="palletsumres.resx">
+      <DependentUpon>palletsumres.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plocation.resx">
+      <DependentUpon>plocation.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptcoarevise.resx">
+      <DependentUpon>rptcoarevise.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptlogsheetrevise.resx">
+      <DependentUpon>rptlogsheetrevise.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptorderfill.resx">
+      <DependentUpon>rptorderfill.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptpallettag.resx">
+      <DependentUpon>rptpallettag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shift.resx">
+      <DependentUpon>shift.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stocksheet.resx">
+      <DependentUpon>stocksheet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticket.resx">
+      <DependentUpon>ticket.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketbag.resx">
+      <DependentUpon>ticketbag.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketcancel.resx">
+      <DependentUpon>ticketcancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketchoose.resx">
+      <DependentUpon>ticketchoose.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tickethourly.resx">
+      <DependentUpon>tickethourly.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketlines.resx">
+      <DependentUpon>ticketlines.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketrems.resx">
+      <DependentUpon>ticketrems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ticketsum.resx">
+      <DependentUpon>ticketsum.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlogbin.resx">
+      <DependentUpon>tlogbin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tlogcancel.resx">
+      <DependentUpon>tlogcancel.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsearch.resx">
+      <DependentUpon>tsearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tselectline.resx">
+      <DependentUpon>tselectline.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsetitem.resx">
+      <DependentUpon>tsetitem.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tsetrange.resx">
+      <DependentUpon>tsetrange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users.resx">
+      <DependentUpon>users.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="version.resx">
+      <DependentUpon>version.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewbin.resx">
+      <DependentUpon>viewbin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewpallet.resx">
+      <DependentUpon>viewpallet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewpallets.resx">
+      <DependentUpon>viewpallets.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wgroup.resx">
+      <DependentUpon>wgroup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="whse.resx">
+      <DependentUpon>whse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broom.ico" />
+    <None Include="Resources\cancel.png" />
+    <Content Include="agi logo1.ico" />
+    <Content Include="cnstringcalaca.txt" />
+    <Content Include="Resources\ok.png" />
+    <Content Include="tickets.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

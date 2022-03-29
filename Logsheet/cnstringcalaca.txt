@@ -1,0 +1,1 @@
+Data Source=DESKTOP-IQC9LGG\MSSQLSERVER2012;Network Library=DBMSSOCN;Initial Catalog=agidb;User ID=adminserver;Password=server;
